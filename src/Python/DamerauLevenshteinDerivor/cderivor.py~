@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+import os, string, subprocess
+
+class Derivor:
+    def __init__(self, tmpipeobj):
+        self.tmpipeobj = tmpipeobj
+
+    def variations(self, word):
+        # res contains derivation information
+    	self.tmpipeobj.stdin.write("d ")
+    	self.tmpipeobj.stdin.write(word)
+    	self.tmpipeobj.stdin.write("\n")
+        res = []
+	l = self.tmpipeobj.stdout.readline()
+        while l != "\n":
+            res.append(l)
+            l = self.tmpipeobj.stdout.readline()
+	return res
+
+
+    def inV(self, word):
+        self.tmpipeobj.stdin.write("v " + word + "\n")
+        return self.tmpipeobj.stdout.readline().strip() == '1'
+
