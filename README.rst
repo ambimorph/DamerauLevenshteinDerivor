@@ -61,3 +61,16 @@ This will copy the ``derivor`` executable into $prefix/bin
 and will execute ``python setup.py install``, which will result in the
 derivor Python module being copied into the appropriate place in
 your Python installation.
+
+===========
+Example Use
+===========
+
+>>> from DamerauLevenshteinDerivor import cderivor
+>>> d = cderivor.Derivor('/bin/derivor', 'my_vocabulary_file')
+>>> d.variations('as')
+['a', 'is', 'us', 'al', 'an', 'at', 'has', 'was']
+>>> d.inV('as')
+True
+>>> d.inV('asx')
+False
