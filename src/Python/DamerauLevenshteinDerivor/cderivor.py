@@ -3,8 +3,8 @@
 import os, string, subprocess
 
 class Derivor:
-    def __init__(self, path_to_derivor_executable, path_to_vocabulary_file):
-        self.derivor = subprocess.Popen([path_to_derivor_executable, path_to_vocabulary_file], stdin=-1, stdout=-1)
+    def __init__(self, path_to_vocabulary_file):
+        self.derivor = subprocess.Popen(['derivor', path_to_vocabulary_file], stdin=-1, stdout=-1)
         self.stdin = self.derivor.stdin
         self.stdout = self.derivor.stdout
 

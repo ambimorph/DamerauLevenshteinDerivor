@@ -5,7 +5,7 @@ import cderivor, unittest
 class DerivorTest(unittest.TestCase):
 
     def setUp(self):
-        self.d = cderivor.Derivor("../../../bin/derivor", "test/data/41vocabulary")
+        self.d = cderivor.Derivor("test/data/41vocabulary")
 
     def test_variations(self):
 
