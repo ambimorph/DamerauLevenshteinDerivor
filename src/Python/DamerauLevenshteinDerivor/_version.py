@@ -179,9 +179,9 @@ def versions_from_parentdir(parentdir_prefix, versionfile_source, verbose=False)
         return None
     return {"version": dirname[len(parentdir_prefix):], "full": ""}
 
-tag_prefix = "BackOffTrigramModel-"
-parentdir_prefix = "BackOffTrigramModel-"
-versionfile_source = "src/Python/BackOffTrigramModel/_version.py"
+tag_prefix = "DamerauLevenshtein-"
+parentdir_prefix = "DamerauLevenshtein-"
+versionfile_source = "src/Python/DamerauLevenshtein/_version.py"
 
 def get_versions(default={"version": "unknown", "full": ""}, verbose=False):
     variables = { "refnames": git_refnames, "full": git_full }
