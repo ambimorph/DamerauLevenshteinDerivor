@@ -67,7 +67,7 @@ Example Use
 ===========
 
 >>> from DamerauLevenshteinDerivor import cderivor
->>> d = cderivor.Derivor('/bin/derivor', 'my_vocabulary_file')
+>>> d = cderivor.Derivor('my_vocabulary_file')
 >>> d.variations('as')
 ['a', 'is', 'us', 'al', 'an', 'at', 'has', 'was']
 >>> d.inV('as')
